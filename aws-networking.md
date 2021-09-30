@@ -1,4 +1,6 @@
 
+Some notes from various experiments I did at work, few of them took days to debug, hope these help someone :) 
+
 ## Networking Basics
 
 *Analogy: AWS is the whole office building, VPC is a floor, Subnets are conference room/suites.*
