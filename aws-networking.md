@@ -39,4 +39,4 @@
    `OS firewall -> resource Security Group (outbound rules) -> Public Subnet ACL(outbound rules) -> Internet Gateway`
 4. Flow of outgoing request from a resource in a Private Subnet to the internet\
    `OS firewall -> resource Security Group (outbound rules) -> NAT Gateway -> Public Subnet ACL(outbound rules) -> Internet Gateway`
-5. Lambdas **must** be placed in private subnets with NAT gateway connections if they need to access the internet
+5. Lambdas **must** be placed in private subnets with NAT gateway connections if they need to access the internet. This is because Lambdas can *only* have private IPs. The default route for a resource with a private IP in a public subnet is an IGW so packets will be dropped at the gateway. The default route for a resource with a private IP in a private subnet is a NAT gateway which is then connected to the IGW.
