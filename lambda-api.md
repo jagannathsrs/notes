@@ -8,8 +8,6 @@ AWS Lambda hard limits:
 
 / | Application Load Balancer | API Gateway | Lambda function URL | Lambda function URL with Cloudfront Distribution |
 ---- | ----- | ---- | ---- | ---- | 
-Request payload limit | 0 | 10 mb | 0 | 0 |
-Response payload limit | 0 | 10 mb | 0 | 0 |
-Response time limit | 3600 secs | 29 secs | 0 | 0 |
+Response payload limit | 1 mb | 10 mb | 6 mb | 6 mb |
+Response time limit | 3600 secs | 29 secs | 15 mins | 180 s* |
 Security | NA | NA | IAM,CORS | IAM,CORS |
-Additional functionalities | NA | NA | NA | NA |
